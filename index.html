@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>抽奖转盘</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* 大转盘样式 */
+
+		.content {
+			display: block;
+			width: 95%;
+			/*居中显示*/
+			margin: 30px auto;
+		}
+
+		.content .wheel {
+			display: block;
+			width: 50%;
+			position: relative;
+			/*转盘的背景*/
+			background-image: url(./images/wheel-bg.png);
+			background-size: 100% 100%;
+		}
+
+		.content .wheel canvas.item {
+			width: 100%;
+		}
+
+		.content .wheel img.pointer {
+			position: absolute;
+			width: 31.5%;
+			height: 42.5%;
+			left: 34.3%;
+			top: 23%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="content">
+		<div class="wheel">
+			<canvas class="item" id="wheelCanvas" width="422px" height="422px"></canvas>
+			<img class="pointer" src="images/wheel-pointer.png" />
+		</div>
+	</div>
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/jQueryRotate.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
